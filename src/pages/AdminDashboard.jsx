@@ -4,6 +4,7 @@ import ReviewBookTable from "../components/ReviewBookTable";
 import { useState } from "react";
 import AdminDashboardCards from "../components/AdminDashboardCards";
 import AddBookAdmin from "../components/AddBookAdmin";
+import ExistingGeners from "../components/ExistingGeners";
 
 const AdminDashboard = () => {
 	const [active, setActive] = useState("requests");
@@ -21,12 +22,9 @@ const AdminDashboard = () => {
 				case "add-books":
 					setComponent(<AddBookAdmin />);
 					break;
-				// case "dashboard":
-				// 	setComponent(<AdminDashboardCards />);
-				// 	break;
-				// case "dashboard":
-				// 	setComponent(<AdminDashboardCards />);
-				// 	break;
+				case "genres":
+					setComponent(<ExistingGeners />);
+					break;
 				default:
 					setComponent(<AdminDashboardCards />);
 			}

@@ -6,7 +6,7 @@ import UserDashboard from './UserDashboard';
 const DashboardManager = () => {
     let user = useAuth();  
     console.log(user);
-    return <div>{user.user.role == 'ADMIN' ? <AdminDashboard/>: <UserDashboard/>}</div>;
+    return <div>{user.user?.role == 'ADMIN' ? <AdminDashboard/>: <UserDashboard/>}</div>;
 };
 
 export default DashboardManager;

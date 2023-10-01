@@ -2,8 +2,8 @@ import React from "react";
 import FullLogo from "../assets/images/Full_Logo.png";
 import { Link } from "react-router-dom";
 
-const AdminSidebar = (props) => {
-	const {active, setActive} = props;
+const UserSidebar = (props) => {
+	const { active, setActive } = props;
 
 	return (
 		<div className="flex flex-col w-64 bg-gray-800 h-screen sticky top-0 left-0">
@@ -11,7 +11,7 @@ const AdminSidebar = (props) => {
 				<img src={FullLogo} alt="Logo" className="w-40" />
 			</Link>
 			<ul className="flex flex-col flex-1 pl-4 pt-12">
-				<li
+				{/* <li
 					className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium duration-300 ease-in-out hover:text-[#ff971d] hover:bg-white ${
 						active === "dashboard" ? "text-[#ff971d] bg-white" : "text-white"
 					}`}
@@ -44,13 +44,13 @@ const AdminSidebar = (props) => {
 						/>
 					</svg>
 					Dashboard
-				</li>
+				</li> */}
 				<li
 					className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium duration-300 ease-in-out hover:text-[#ff971d] hover:bg-white ${
-						active === "requests" ? "text-[#ff971d] bg-white" : "text-white"
+						active === "listings" ? "text-[#ff971d] bg-white" : "text-white"
 					}`}
-					name="requests"
-					onClick={() => setActive("requests")}
+					name="listings"
+					onClick={() => setActive("listings")}
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ const AdminSidebar = (props) => {
 						<path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />{" "}
 						<path d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z" />{" "}
 					</svg>
-					Requests
+					Listings
 				</li>
 				<li
 					className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium duration-300 ease-in-out hover:text-[#ff971d] hover:bg-white ${
@@ -161,7 +161,7 @@ const AdminSidebar = (props) => {
 					</svg>
 					Authors
 				</li> */}
-				<li
+				{/* <li
 					className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium duration-300 ease-in-out hover:text-[#ff971d] hover:bg-white ${
 						active === "genres" ? "text-[#ff971d] bg-white" : "text-white"
 					}`}
@@ -181,10 +181,9 @@ const AdminSidebar = (props) => {
 						<path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />{" "}
 					</svg>
 					Genres
-				</li>
-			</ul>
-
-			{/* Sidebar footer */}
+				</li>*/}
+			</ul>{" "}
+			*{/* Sidebar footer */}
 			<div className="flex items-center justify-center h-16 text-white">
 				&copy; 2023 BookMark
 			</div>
@@ -192,4 +191,4 @@ const AdminSidebar = (props) => {
 	);
 };
 
-export default AdminSidebar;
+export default UserSidebar;

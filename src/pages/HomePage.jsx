@@ -6,13 +6,12 @@ import { useAuth } from "../context/AuthContext";
 
 const HomePage = () => {
 	let user = useAuth();
-	console.log(user);
+	// console.log(user);
 	return (
 		<div>
 			<Header />
-			<Body token={user.isLoggedin ? user.user.role : ""}/>
+			<Body token={user.isLoggedin ? user.user?.role : ""}/>
 			<Footer />
-			{user.isLoggedin ? <p> Logedin: {user.user.role}</p>: <p>not loged in</p>}
 		</div>
 	);
 };
